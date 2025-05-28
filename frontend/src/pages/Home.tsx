@@ -1,30 +1,26 @@
 const Home = () => {
     return (
-        <div className="min-h-screen bg-gray-100 text-gray-900">
-            {/* Titolo */}
-            <header className="bg-white shadow p-4">
-                <h1 className="text-3xl font-bold text-center">GameBoardHub</h1>
+        <div className="min-h-screen bg-gray-900 text-gray-100">
+            <header className="bg-gray-800 p-6 shadow-md">
+                <h1 className="text-4xl font-bold text-center mb-4">GameBoardHub</h1>
+                <nav>
+                    <div className="flex justify-center gap-6">
+                        <button className="bg-gray-700 px-5 py-2 rounded hover:bg-gray-600 transition">
+                            Home
+                        </button>
+                        <button className="bg-gray-700 px-5 py-2 rounded hover:bg-gray-600 transition">
+                            Articoli
+                        </button>
+                        <button className="bg-gray-700 px-5 py-2 rounded hover:bg-gray-600 transition">
+                            Contatti
+                        </button>
+                    </div>
+                </nav>
             </header>
 
-            {/* Navbar */}
-            <nav className="bg-white shadow p-4 mt-2">
-                <div className="flex justify-center gap-4">
-                    <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                        Home
-                    </button>
-                    <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                        Articoli
-                    </button>
-                    <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                        Contatti
-                    </button>
-                </div>
-            </nav>
-
-            {/* Contenuto principale */}
             <main className="p-8 text-center">
                 <h2 className="text-2xl font-semibold mb-4">Benvenuto su GameBoardHub</h2>
-                <p className="text-lg">
+                <p className="max-w-xl mx-auto">
                     Qui troverai articoli, recensioni e curiosità sul mondo dell'informatica e dei giochi da tavolo.
                 </p>
             </main>
