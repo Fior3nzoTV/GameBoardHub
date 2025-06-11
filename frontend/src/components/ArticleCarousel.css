@@ -1,0 +1,80 @@
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 400px;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px 0;
+}
+
+.carousel-left,
+.carousel-right {
+    position: absolute;
+    top: 20%;
+    width: 40%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    transition: opacity 0.5s ease;
+}
+
+.carousel-left {
+    left: 0;
+    text-align: left;
+}
+
+.carousel-right {
+    right: 0;
+    text-align: right;
+}
+
+.carousel-left h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.carousel-right p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: black;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 1;
+    z-index: 10;
+}
+
+.carousel-nav.left {
+    left: 10px;
+}
+
+.carousel-nav.right {
+    right: 10px;
+}
