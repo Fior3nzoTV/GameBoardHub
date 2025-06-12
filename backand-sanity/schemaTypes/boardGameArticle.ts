@@ -48,11 +48,22 @@ export default {
           type: 'string',
         },
         {
-          name: 'category',
-          title: 'Categoria del gioco',
+          name: 'typology',
+          title: 'Tipologia del gioco',
           type: 'reference',
-          to: [{type: 'category'}],
+          to: [{type: 'typology'}],
           validation: (Rule: {required: () => any}) => Rule.required(),
+        },
+        {
+          name: 'mechanics',
+          title: 'Meccaniche di gioco',
+          type: 'array',
+          of: [
+            {
+              type: 'reference',
+              to: [{type: 'mechanic'}],
+            },
+          ],
         },
       ],
     },

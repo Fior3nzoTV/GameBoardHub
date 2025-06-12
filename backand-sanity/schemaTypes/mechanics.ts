@@ -1,11 +1,11 @@
 export default {
-  name: 'category',
-  title: 'Categoria',
+  name: 'mechanic',
+  title: 'Meccanica di gioco',
   type: 'document',
   fields: [
     {
-      name: 'title',
-      title: 'Titolo della categoria',
+      name: 'name',
+      title: 'Nome',
       type: 'string',
       validation: (Rule: {required: () => any}) => Rule.required(),
     },
@@ -14,15 +14,17 @@ export default {
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: 'name',
         maxLength: 96,
       },
       validation: (Rule: {required: () => any}) => Rule.required(),
     },
     {
       name: 'description',
-      title: 'Descrizione (facoltativa)',
+      title: 'Descrizione',
       type: 'text',
+      description: 'Breve spiegazione della meccanica di gioco',
+      validation: (Rule: {required: () => any}) => Rule.required(),
     },
   ],
 }
