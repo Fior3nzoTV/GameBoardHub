@@ -5,7 +5,7 @@ export default {
   fields: [
     {
       name: 'name',
-      title: 'Nome',
+      title: 'Nome della meccanica',
       type: 'string',
       validation: (Rule: {required: () => any}) => Rule.required(),
     },
@@ -20,10 +20,10 @@ export default {
       validation: (Rule: {required: () => any}) => Rule.required(),
     },
     {
-      name: 'description',
+      name: 'body',
       title: 'Descrizione',
-      type: 'text',
-      description: 'Breve spiegazione della meccanica di gioco',
+      type: 'array',
+      of: [{type: 'block'}],
       validation: (Rule: {required: () => any}) => Rule.required(),
     },
   ],

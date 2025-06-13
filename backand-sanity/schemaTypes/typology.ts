@@ -5,7 +5,7 @@ export default {
   fields: [
     {
       name: 'title',
-      title: 'Titolo della tipologia',
+      title: 'Nome della tipologia',
       type: 'string',
       validation: (Rule: {required: () => any}) => Rule.required(),
     },
@@ -20,9 +20,11 @@ export default {
       validation: (Rule: {required: () => any}) => Rule.required(),
     },
     {
-      name: 'description',
-      title: 'Descrizione (facoltativa)',
-      type: 'text',
+      name: 'body',
+      title: 'Descrizione',
+      type: 'array',
+      of: [{type: 'block'}],
+      validation: (Rule: {required: () => any}) => Rule.required(),
     },
   ],
 }
