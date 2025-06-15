@@ -29,6 +29,22 @@ const Header: React.FC = () => {
                     Articoli
                 </Link>
                 <Link
+                    to="/tipologia"
+                    className={`px-5 py-2 rounded transition ${
+                        isActive('/tipologia') ? 'bg-gray-600' : 'bg-gray-700 hover:bg-gray-600'
+                    }`}
+                >
+                    Tipologia
+                </Link>
+                <Link
+                    to="/meccaniche"
+                    className={`px-5 py-2 rounded transition ${
+                        isActive('/meccaniche') ? 'bg-gray-600' : 'bg-gray-700 hover:bg-gray-600'
+                    }`}
+                >
+                    Meccaniche
+                </Link>
+                <Link
                     to="/contatti"
                     className={`px-5 py-2 rounded transition ${
                         isActive('/contatti') ? 'bg-gray-600' : 'bg-gray-700 hover:bg-gray-600'
